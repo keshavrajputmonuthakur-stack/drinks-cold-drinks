@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ColdDrop | Cold Drinks</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            🥤 ColdDrop
+        </div>
+
+        <button class="cart-btn" onclick="openCart()">
+            🛒 Cart
+            <span id="cartCount">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="small-badge">
+                🥤 COLD DRINKS ONLY
+            </div>
+
+            <h1>
+                Your Favourite
+                <span>Cold Drinks</span>
+            </h1>
+
+            <p>
+                Apni favourite cold drink choose karo,
+                cart mein add karo aur ghar par mangao.
+            </p>
+
+            <a href="#drinks" class="hero-button">
+                🥤 Drinks Dekho
+            </a>
+
+        </div>
+
+        <div class="hero-drink">
+            🥤
+        </div>
+
+    </section>
+
+
+    <!-- DRINKS -->
+    <section class="drinks-section" id="drinks">
+
+        <div class="section-heading">
+
+            <span>OUR MENU</span>
+
+            <h2>
+                Choose Your Drink
+            </h2>
+
+            <p>
+                Sirf cold drinks — aur kuch nahi.
+            </p>
+
+        </div>
+
+
+        <!-- FILTER BUTTONS -->
+        <div class="filters">
+
+            <button
+                class="filter active"
+                onclick="filterDrinks('all', this)">
+                All
+            </button>
+
+            <button
+                class="filter"
+                onclick="filterDrinks('cola', this)">
+                Cola
+            </button>
+
+            <button
+                class="filter"
+                onclick="filterDrinks('lemon', this)">
+                Lemon
+            </button>
+
+            <button
+                class="filter"
+                onclick="filterDrinks('orange', this)">
+                Orange
+            </button>
+
+            <button
+                class="filter"
+                onclick="filterDrinks('energy', this)">
+                Energy
+            </button>
+
+        
+
+        </div>
+
+
+        <!-- PRODUCT LIST -->
+        <div
+            class="product-grid"
+            id="productGrid">
+        </div>
+
+    </section>
+
+
+    <!-- CART MODAL -->
+    <div
+        class="cart-modal"
+        id="cartModal">
+
+        <div class="cart-box">
+
+            <button
+                class="close-cart"
+                onclick="closeCart()">
+                ×
+            </button>
+
+
+            <h2>
+                🛒 Your Cart
+            </h2>
+
+
+            <!-- CART PRODUCTS -->
+            <div id="cartItems">
+
+            </div>
+
+
+            <!-- DELIVERY ADDRESS -->
+            <div class="delivery-box">
+
+                <h3>
+                    📍 Delivery Address
+                </h3>
+
+                <p>
+                    Order deliver karne ke liye apna address likhein.
+                </p>
+
+                <textarea
+                    id="location"
+                    placeholder="Village, mohalla, ghar number..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- TOTAL -->
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong>
+                    ₹<span id="cartTotal">0</span>
+                </strong>
+
+            </div>
+
+
+            <!-- WHATSAPP -->
+            <button
+                class="whatsapp-btn"
+                onclick="sendOrder()">
+
+                📱 Order on WhatsApp
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            🥤 ColdDrop
+        </div>
+
+        <p>
+            Only Cold Drinks • Fresh • Fast • Local
+        </p>
+
+        <small>
+            © 2026 ColdDrop. All Rights Reserved.
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
